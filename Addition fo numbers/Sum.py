@@ -7,23 +7,10 @@ Original file is located at
     https://colab.research.google.com/drive/1uzyj_21F1u0ijvjPyajR55Qhi2pN37jm
 """
 
-import numpy as np
-import matplotlib.pyplot as plt
 
-def print_header():
-    
-    header_text = ''
-    TEXT = f' total numbers \n'
-    line = '*' * len(TEXT)
-    line += '\n'
-
-    header_text += line
-    header_text += TEXT
-    header_text += line
-    print(header_text)
 
 def get_numbers():
-
+    """ getting 5 numbers as input and put them in a list. while it is a number -not character- continue"""
     numbers = list()
     while len(numbers) != 5:
         try:
@@ -34,40 +21,23 @@ def get_numbers():
             print('A valid input is required')
     return numbers
 
+
 def get_total(numbers):
+    """ calculating the sum of numbers"""
     return sum(numbers)
 
 
 def print_total(total):
+    """ printing the result as output """
     print(f'The total is {total}.')  
 
-def get_multi(numbers):
-    num = numbers**2
-    return num
-
-def print_multi(num):
-    print(f'The mutiplication is {num}.')
 
 if __name__ == "__main__":
-    
+    """ implementation """
     print_header()
     numbers = get_numbers()
     total = get_total(numbers)
     
     print_total(total)
 
-
-
-
-
-
-
-
-
-features, target = make_regression ( n_samples= 10000, n_features= 100, n_informative= 2 , random_state=1)
-
-ols= linear_model.LinearRegression
-rfecv= RFECV(estimator= ols, step=1, scoring= "neg_mean_squard_error")
-rfecv.fit(features,target)
-rfecv.transform(features)
 
